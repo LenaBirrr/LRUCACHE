@@ -49,11 +49,9 @@ public class LruCache<K,V> implements ILruCache<K,V>{
                 delval=tail.value;
                 map.remove(tail.key);
                 delete(tail);
-                setHead(newNode);
-            }else{
-                setHead(newNode);
             }
 
+            setHead(newNode);
             map.put(key, newNode);
         }
         return delval;
@@ -71,8 +69,7 @@ public class LruCache<K,V> implements ILruCache<K,V>{
     public LinkedList<K> getTenRecent() {
         LinkedList<K> res=new LinkedList<K>();
         Node ptr=head;
-        for(int i=0;i<10&&ptr!=null;i++)
-        {
+        for(int i=0;i<10&&ptr!=null;i++) {
             res.add(ptr.key);
             ptr=ptr.next;
         }
@@ -80,18 +77,15 @@ public class LruCache<K,V> implements ILruCache<K,V>{
     }
 
     public void delete(Node node){
-        if(node.prev!=null){
+        if(node.prev!=null)
             node.prev.next = node.next;
-        }else{
+        else
             head = node.next;
-        }
 
-        if(node.next!=null){
+        if(node.next!=null)
             node.next.prev = node.prev;
-        }else{
+        else
             tail = node.prev;
-        }
-
     }
     public void setHead(Node node){
         node.next = head;
