@@ -1,6 +1,7 @@
-package menu;
+package LABLRUCACHE;
 
-import lru_cahe.ILruCache;
+import LABLRUCACHE.fabric.LruCacheFabric;
+import LABLRUCACHE.lru_cahe.ILruCache;
 
 
 import java.util.Scanner;
