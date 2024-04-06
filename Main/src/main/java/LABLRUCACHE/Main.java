@@ -1,8 +1,7 @@
-package com.company;
+package LABLRUCACHE;
 
-import fabric.LruCacheFabric;
-import lru_cahe.ILruCache;
-import menu.Menu;
+import LABLRUCACHE.fabric.LruCacheFabric;
+import LABLRUCACHE.lru_cahe.ILruCache;
 
 import java.util.Scanner;
 /*
@@ -27,7 +26,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int lruCacheType;
-        LruCacheFabric<Integer, Integer>fabric = new LruCacheFabric<>();
+        LruCacheFabric<Integer, Integer> fabric = new LruCacheFabric<>();
 
         do {
             System.out.println("0 - обычный LRU-cache");
