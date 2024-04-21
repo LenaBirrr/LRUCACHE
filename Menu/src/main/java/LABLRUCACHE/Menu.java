@@ -1,6 +1,7 @@
-package menu;
+package LABLRUCACHE;
 
-import lru_cahe.ILruCache;
+import LABLRUCACHE.fabric.LruCacheFabric;
+import LABLRUCACHE.lru_cahe.ILruCache;
 
 
 import java.util.Scanner;
@@ -25,6 +26,13 @@ public class Menu {
         System.out.println("Зачение: "+lruCache.get(scanner.nextInt()));
 
     }
+    private void getSize()
+    {
+        System.out.println("Введите ключ:");
+
+        System.out.println("Размер кэша: "+ lruCache.getSize());
+
+    }
 
     public void Manipulate()
     {
@@ -33,6 +41,7 @@ public class Menu {
             System.out.println("0 - закончить работу:");
             System.out.println("1- добавить значение");
             System.out.println("2 - получить значение по ключу");
+            System.out.println("3 - узнать текущий размер кэша");
             option=scanner.nextInt();
             switch (option)
             {
@@ -42,6 +51,10 @@ public class Menu {
                 }
                 case 2->{
                     getElem();
+                    break;
+                }
+                case 3->{
+                    getSize();
                     break;
                 }
             }

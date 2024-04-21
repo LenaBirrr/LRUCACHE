@@ -1,8 +1,8 @@
-package fabric;
+package LABLRUCACHE.fabric;
 
-import lru_cahe.ILruCache;
-import lru_cahe.LruCache;
-import lru_cahe.LruCacheInvocationHandler;
+import LABLRUCACHE.lru_cahe.LruCache;
+import LABLRUCACHE.lru_cahe.LruCacheInvocationHandler;
+import LABLRUCACHE.lru_cahe.ILruCache;
 
 import java.lang.reflect.Proxy;
 

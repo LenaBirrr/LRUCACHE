@@ -1,4 +1,4 @@
-package lru_cahe;
+package LABLRUCACHE.lru_cahe;
 import java.util.HashMap;
 import java.util.LinkedList;
 
