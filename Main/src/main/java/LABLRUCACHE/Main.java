@@ -37,7 +37,7 @@ public class Main {
         System.out.println("введите размер");
         ILruCache<Integer,Integer> lruCache=fabric.CreateLruCache(lruCacheType,scanner.nextInt());
 
-        Menu menu=new Menu(lruCache);
+        Menu menu=new Menu(lruCache, System.in);
         menu.Manipulate();
     }
 }

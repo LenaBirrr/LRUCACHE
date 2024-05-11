@@ -4,22 +4,24 @@ import LABLRUCACHE.fabric.LruCacheFabric;
 import LABLRUCACHE.lru_cahe.ILruCache;
 
 
+import java.io.InputStream;
 import java.util.Scanner;
 
 public class Menu {
     private final ILruCache lruCache;
-    private final Scanner scanner=new Scanner(System.in);
-    public Menu(ILruCache lruCache)
+    private final Scanner scanner;
+    public Menu(ILruCache lruCache, InputStream stream)
     {
         this.lruCache=lruCache;
+        this.scanner=new Scanner(stream);
     }
-    private void setElem()
+    public void setElem()
     {
         System.out.println("Введите через пробел пару чисел ключ-значение:");
         lruCache.set(scanner.nextInt(), scanner.nextInt());
     }
 
-    private void getElem()
+    public void getElem()
     {
         System.out.println("Введите ключ:");
 
