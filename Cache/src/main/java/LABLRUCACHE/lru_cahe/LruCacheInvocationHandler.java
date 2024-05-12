@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 import java.util.LinkedList;
 
 public class LruCacheInvocationHandler<K,V> implements InvocationHandler{
-    private LruCache<K,V> lruCache;
+    private final LruCache<K,V> lruCache;
 
     public LruCacheInvocationHandler(LruCache<K,V> lruCache) {
         this.lruCache=lruCache;
