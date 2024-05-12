@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("Compile code") {
             steps {
-                bat '"D:\\maven\\bin\\mvn.cmd" clean package'
+                bat 'mvn clean compile'
             }
         }
         stage("Tests") {
