@@ -1,9 +1,10 @@
 pipeline {
     agent any
+
     stages {
-        stage("Build") {
+        stage("Compile code") {
             steps {
-                powershell '"D:\\maven\\bin\\mvn.cmd" clean package'
+                bat 'mvn clean compile'
             }
         }
         stage("Tests") {
