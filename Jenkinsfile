@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                bat '"D:\\maven\\bin\\mvn.cmd" clean package'
+                powershell '"D:\\maven\\bin\\mvn.cmd" clean package'
             }
         }
         stage("Tests") {
