@@ -39,7 +39,7 @@ pipeline {
         }
         stage("Publish") {
             steps {
-                bat 'copy "main\\target\\main-1.0-SNAPSHOT-jar-with-dependencies.jar" "C:\\main-1.0.jar"'
+                bat 'copy "Main\\target\\Main-1.0-SNAPSHOT-jar-with-dependencies.jar" "publication\\main-1.0.jar"'
             }
         }
     }
