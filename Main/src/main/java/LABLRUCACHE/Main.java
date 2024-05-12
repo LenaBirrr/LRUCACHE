@@ -4,6 +4,7 @@ import LABLRUCACHE.fabric.LruCacheFabric;
 import LABLRUCACHE.lru_cahe.ILruCache;
 
 import java.util.Scanner;
+
 /*
 Вариант 1
 Реализовать фабрику (или фабричный метод), которая позволяет
@@ -31,13 +32,13 @@ public class Main {
         do {
             System.out.println("0 - обычный LRU-cache");
             System.out.println("1 - прокси LRU-cache с доп. информацией");
-            lruCacheType=scanner.nextInt();
-        }while(!(lruCacheType==0||lruCacheType==1));
+            lruCacheType = scanner.nextInt();
+        } while (!(lruCacheType == 0 || lruCacheType == 1));
 
         System.out.println("введите размер");
-        ILruCache<Integer,Integer> lruCache=fabric.CreateLruCache(lruCacheType,scanner.nextInt());
+        ILruCache<Integer, Integer> lruCache = fabric.CreateLruCache(lruCacheType, scanner.nextInt());
 
-        Menu menu=new Menu(lruCache, System.in);
+        Menu menu = new Menu(lruCache, System.in);
         menu.Manipulate();
     }
 }
