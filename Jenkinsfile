@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        M2_HOME = "D:\maven"
+        M2_HOME = "D:\\maven"
         PATH = "${M2_HOME}/bin:${PATH}"
     }
 
