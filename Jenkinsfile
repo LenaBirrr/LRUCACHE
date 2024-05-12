@@ -1,15 +1,9 @@
 pipeline {
     agent any
-
-    environment {
-        M2_HOME = "D:\\maven"
-        PATH = "${M2_HOME}/bin:${PATH}"
-    }
-
     stages {
         stage("Build") {
             steps {
-                sh 'mvn clean package'
+                bat 'mvn clean package'
             }
         }
         stage("Tests") {
