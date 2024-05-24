@@ -105,5 +105,9 @@ public class LruCache<K, V> implements ILruCache<K, V> {
             tail = head;
     }
 
+    private int Useless()
+    {
+        return 0;
+    }
 }
 
