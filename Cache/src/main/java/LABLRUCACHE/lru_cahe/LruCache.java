@@ -109,5 +109,10 @@ public class LruCache<K, V> implements ILruCache<K, V> {
     {
         return 0;
     }
+
+    private int Useless1()
+    {
+        return 0;
+    }
 }
 
